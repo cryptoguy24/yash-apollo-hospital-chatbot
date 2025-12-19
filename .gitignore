@@ -15,10 +15,6 @@ tmp/
 *.db
 *.db-journal
 
-# --- Vector Database (ChromaDB) ---
-# From faq.py: path="data/vector_db/chromadb_faqs"
-data/vector_db/
-
 # --- OS Specific ---
 .DS_Store
 Thumbs.db
