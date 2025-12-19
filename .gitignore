@@ -9,12 +9,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# --- Databases & Local Storage ---
-# From sql.py: db=SqliteDb(db_file="tmp/agent.db")
-tmp/
-*.db
-*.db-journal
-
 # --- OS Specific ---
 .DS_Store
 Thumbs.db
