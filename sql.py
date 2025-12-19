@@ -26,7 +26,7 @@ load_dotenv()
 # db_url = f"sqlite:///{db_path}"  # Create a database URL for SQLAlchemy
 
 # For streamlit purpose
-base_dir = Path(__file__).parent.absolute()
+current_dir = Path(__file__).parent.absolute()
 db_path = base_dir / "data" / "appointment_system.db"
 db_url = f"sqlite:///{db_path}"
 
