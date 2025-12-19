@@ -1,5 +1,9 @@
 import streamlit as st
 from router import router
+from langchain_groq import ChatGroq
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+from config import GROQ_MODEL_L2
 from faq import generate_faq_response
 from sql import handling_agent
 from dotenv import load_dotenv
@@ -22,6 +26,22 @@ if "last_active_route" not in st.session_state:
     st.session_state.last_active_route = None
 if "messages" not in st.session_state:
     st.session_state.messages = []
+    
+# --- llm_client ---
+template = """
+You are a helpful assistant from Apollo Hospital. 
+You greet the user warmly if they greet you. 
+
+The user asked: {query}
+
+This question seems unrelated to Apollo Hospital. 
+Politely explain that you can only assist with hospital-related 
+queries like appointments, doctors, and services.
+"""
+llm = ChatGroq(model=os.environ.get('GROQ_MODEL_L1')) # Using a fast model for refusals
+helping_prompt = PromptTemplate(template=template, input_variables=["query"])
+parser = StrOutputParser()
+chain = helping_prompt | llm | parser
 
 # --- CORE LOGIC ---
 def ask(query: str, session_id: str) -> str:
@@ -40,7 +60,7 @@ def ask(query: str, session_id: str) -> str:
             history_context = "\n".join([f"{m['role']}: {m['content']}" for m in st.session_state.messages[-5:]])
             return generate_faq_response(query, chat_history=history_context)
         else:
-            return "Please ask only about Apollo Hospital related queries."
+            return chain.invoke({'query':query}) #"Please ask only about Apollo Hospital related queries."
 
 # --- CALLBACK FOR BUTTONS ---
 def handle_quick_query(query_text):
