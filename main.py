@@ -9,6 +9,34 @@ from dotenv import load_dotenv
 import uuid
 import os
 
+# --- PAGE CONFIGURATION ---
+st.set_page_config(
+    page_title="Apollo Hospital Assistant",
+    page_icon="🏥",
+    layout="centered"
+)
+
+# --- CUSTOM CSS FOR BRANDING ---
+st.markdown("""
+    <style>
+    .main {
+        background-color: #f8f9fa;
+    }
+    .stChatFloatingInputContainer {
+        bottom: 20px;
+    }
+    .st-emotion-cache-1c7n2ka { 
+        background-color: #ffffff; /* Background for chat messages */
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+    }
+    h1 {
+        color: #004a99; /* Apollo Blue */
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 load_dotenv()
 
 # -----------------------------
@@ -19,50 +47,56 @@ if "session_id" not in st.session_state:
     
 if "last_active_route" not in st.session_state:
     st.session_state.last_active_route = None
+
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+# --- SIDEBAR UI ---
+with st.sidebar:
+    st.image("https://www.apollohospitals.com/wp-content/themes/apollohospitals/assets/images/logo.png", width=200)
+    st.title("Patient Portal")
+    st.info("Welcome to Apollo's AI Assistant. You can book appointments or ask about our services.")
+    
+    if st.button("🗑️ Clear Conversation"):
+        st.session_state.messages = []
+        st.session_state.last_active_route = None
+        st.rerun()
+    
+    st.divider()
+    st.markdown("### Quick Links")
+    st.markdown("- [Emergency Services](https://www.apollohospitals.com)")
+    st.markdown("- [Find a Doctor](https://www.apollohospitals.com)")
+
 # -----------------------------
 # Core logic function
 # -----------------------------
-
 def ask(query: str, session_id: str) -> str:
     route = router(query)
 
-    # -------------------------------------------
-    # SCENARIO A: Router found a Clear Match
-    # -------------------------------------------
     if route.name == "faq":
-        st.session_state.last_active_route = "faq"  # Update memory
+        st.session_state.last_active_route = "faq"
         return generate_faq_response(query)
 
     elif route.name == "appointment":
-        st.session_state.last_active_route = "appointment" # Update memory
+        st.session_state.last_active_route = "appointment"
         return handling_agent(query, session_id)
     
-    # -------------------------------------------
-    # SCENARIO B: Router is Unsure (e.g., "Yes", "10 AM", "Confirm")
-    # -------------------------------------------
     else:
-        # Check if we were previously in the middle of a booking flow
         if st.session_state.last_active_route == "appointment":
-            # Assume this is a follow-up answer for the agent
             return handling_agent(query, session_id)
         
-        elif route.name == "faq":
-            st.session_state.last_active_route = "faq"
-            # Convert session_state messages to a formatted string for the FAQ prompt
+        elif st.session_state.last_active_route == "faq":
             history_context = "\n".join([f"{m['role']}: {m['content']}" for m in st.session_state.messages[-5:]])
             return generate_faq_response(query, chat_history=history_context)
         
         else:
             return "Please ask only about Apollo Hospital related queries."
-# -----------------------------
-# Streamlit UI
-# -----------------------------
-st.title("Apollo Hospital Chatbot")
 
-query = st.chat_input("Ask me anything about Apollo Hospital:")
-
-if "messages" not in st.session_state:
-    st.session_state.messages = []
+# -----------------------------
+# Streamlit UI Construction
+# -----------------------------
+st.title("🏥 Apollo Hospital AI Assistant")
+st.caption("How can we help you stay healthy today?")
 
 # Display chat history
 for message in st.session_state.messages:
@@ -70,18 +104,19 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # Handle new input
+query = st.chat_input("Ask me about appointments, specialized care, or hospital FAQs...")
+
 if query:
+    # User message
     with st.chat_message("user"):
         st.markdown(query)
-    st.session_state.messages.append(
-        {"role": "user", "content": query}
-    )
+    st.session_state.messages.append({"role": "user", "content": query})
 
     # Bot response
-    response = ask(query, st.session_state.session_id)
+    with st.spinner("Consulting hospital records..."):
+        response = ask(query, st.session_state.session_id)
 
+    # Display Assistant message
     with st.chat_message("assistant"):
         st.markdown(response)
-    st.session_state.messages.append(
-        {"role": "assistant", "content": response}
-    )
+    st.session_state.messages.append({"role": "assistant", "content": response})
