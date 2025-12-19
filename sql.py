@@ -28,7 +28,7 @@ load_dotenv()
 # For streamlit purpose
 current_dir = Path(__file__).parent.absolute()
 db_path = base_dir / "data" / "appointment_system.db"
-db_url = f"sqlite:///{db_path}"
+db_url = f"sqlite:///{db_path}?mode=ro"
 
 # Initialize SQL tools that the AI agent will use to query and modify the database
 sql_tools = SQLTools(db_url=db_url)
