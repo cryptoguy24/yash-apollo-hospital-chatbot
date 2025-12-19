@@ -1,5 +1,6 @@
 # Standard library imports - for file paths and environment variables
 import os
+from pathlib import Path
 
 # Configuration management - for loading API keys and settings from .env file
 from dotenv import load_dotenv
@@ -17,11 +18,17 @@ from agno.db.sqlite import SqliteDb
 # Load environment variables (like API keys) from the .env file
 load_dotenv()
 
-# Set up the path to the SQLite database that stores appointment information
-current_dir = os.path.dirname(os.path.abspath(__file__))  # Get the current file's directory
-db_path = os.path.join(current_dir, "..", "data", "appointment_system.db")  # Navigate to the database file
-db_path = os.path.normpath(db_path)  # Normalize the path for cross-platform compatibility
-db_url = f"sqlite:///{db_path}"  # Create a database URL for SQLAlchemy
+# For local purpose
+# # Set up the path to the SQLite database that stores appointment information
+# current_dir = os.path.dirname(os.path.abspath(__file__))  # Get the current file's directory
+# db_path = os.path.join(current_dir, "..", "data", "appointment_system.db")  # Navigate to the database file
+# db_path = os.path.normpath(db_path)  # Normalize the path for cross-platform compatibility
+# db_url = f"sqlite:///{db_path}"  # Create a database URL for SQLAlchemy
+
+# For streamlit purpose
+base_dir = Path(__file__).parent.absolute()
+db_path = base_dir / "data" / "appointment_system.db"
+db_url = f"sqlite:///{db_path}"
 
 # Initialize SQL tools that the AI agent will use to query and modify the database
 sql_tools = SQLTools(db_url=db_url)
