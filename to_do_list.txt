@@ -1,0 +1,5 @@
+1. improve semantic serach by adding totally new uttarances (done)
+2. Also add last_active_call for faq and add custom instruction for llm there to with integrating memory function there too (done)
+3. Improve the response of sql.py (done)
+4. improve chating experience add timing for doctor too (done)
+5. Add accurate date and day co-ordination (done)

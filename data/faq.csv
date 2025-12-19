@@ -1,0 +1,181 @@
+question,answer,topic
+"What services does Apollo Hospital provide?","Apollo Hospital provides outpatient consultations, emergency care, surgeries, diagnostics, pharmacy services, preventive health checkups, and specialty treatments across multiple departments.","General Hospital Information"
+"What are the hospital's working hours?","Outpatient departments run during scheduled hours, usually from morning to evening. Emergency and pharmacy services operate 24/7.","General Hospital Information"
+"How can I contact Apollo Hospital customer care?","You can contact customer care through the hospital's official helpline, website, or mobile app.","General Hospital Information"
+"Does Apollo Hospital offer emergency services 24/7?","Yes, emergency, ICU, trauma care, and ambulance services operate round the clock.","General Hospital Information"
+"What is the procedure to book an appointment?","Appointments can be booked online, through the mobile app, helpline, or by visiting the hospital reception.","General Hospital Information"
+"How do I locate the nearest Apollo Hospital branch?","You can use the hospital website or app to find the nearest branch using your city or PIN code.","General Hospital Information"
+"Are visitors allowed inside patient wards?","Yes, but visitor access depends on department rules and infection-control policies.","General Hospital Information"
+"What are the hospital's visitor timings?","Visitor timings vary by department but are generally during limited hours in the morning and evening.","General Hospital Information"
+"Does Apollo Hospital have pharmacy and diagnostic centers on-site?","Yes, most branches have in-house pharmacies and full laboratory and imaging facilities.","General Hospital Information"
+"How can I provide feedback or file a complaint?","You can submit feedback via the app, website, patient relations desk, or feedback forms.","General Hospital Information"
+"How do I book an appointment with a doctor?","Appointments can be booked online, via phone, or at the hospital reception.","Appointment & Consultation"
+"Can I book appointments online or through the app?","Yes, the Apollo app and website support online booking and scheduling.","Appointment & Consultation"
+"How do I reschedule or cancel my appointment?","You can reschedule or cancel through the app, website, or by calling support.","Appointment & Consultation"
+"Will I receive a confirmation message after booking?","Yes, you typically receive SMS/email/app confirmation.","Appointment & Consultation"
+"What documents should I bring for consultation?","Bring your ID proof, previous reports, prescriptions, and insurance details if applicable.","Appointment & Consultation"
+"How early should I arrive before my appointment?","It is recommended to arrive 10–15 minutes early.","Appointment & Consultation"
+"Can I choose a specific doctor or specialist?","Yes, you may choose based on availability and specialty.","Appointment & Consultation"
+"Do I need a referral to see a specialist?","No referral is required unless your insurance demands it.","Appointment & Consultation"
+"How long is the average waiting time?","It varies by department and doctor availability, generally 10–30 minutes.","Appointment & Consultation"
+"Can international patients book virtual consultations?","Yes, online consultations are available for international patients.","Appointment & Consultation"
+"Does Apollo Hospital accept health insurance?","Yes, Apollo accepts most major insurance providers.","Insurance, Billing & Payments"
+"Which insurance providers are empanelled?","Empanelled insurers vary by branch; check with the insurance desk.","Insurance, Billing & Payments"
+"How do I claim insurance for treatment?","Submit your insurance card and ID; the hospital team processes pre-authorization.","Insurance, Billing & Payments"
+"Do I need pre-authorization for cashless treatment?","Yes, pre-authorization is usually required for cashless hospitalization.","Insurance, Billing & Payments"
+"What payment modes are accepted?","Cash, UPI, cards, mobile banking, and online payments.","Insurance, Billing & Payments"
+"Will I get a detailed bill breakdown?","Yes, itemized bills are provided.","Insurance, Billing & Payments"
+"Are consultation charges refundable?","Refunds depend on the cancellation policy.","Insurance, Billing & Payments"
+"Is EMI available for surgeries?","Some branches offer EMI through partnered finance companies.","Insurance, Billing & Payments"
+"How do I get a duplicate invoice?","Request it at the billing counter or through customer support.","Insurance, Billing & Payments"
+"Are diagnostic tests covered under insurance?","Only if prescribed during covered hospitalization, based on your policy.","Insurance, Billing & Payments"
+"How can I access my medical reports online?","Reports are available on the Apollo app and patient portal.","Medical Records & Reports"
+"How long does it take for diagnostic reports?","Most reports are ready within a few hours to 24 hours, depending on the test.","Medical Records & Reports"
+"Can I download my prescriptions digitally?","Yes, digital prescriptions are available on the app.","Medical Records & Reports"
+"How do I update my patient details?","Visit the registration desk or update through the app.","Medical Records & Reports"
+"Can I request old medical records?","Yes, you can request them from the records department.","Medical Records & Reports"
+"How secure is my medical data?","Patient data is stored securely following healthcare data standards.","Medical Records & Reports"
+"Can someone else collect my report?","Yes, with authorization and proper ID proof.","Medical Records & Reports"
+"How long are records stored?","Typically several years, as per regulatory guidelines.","Medical Records & Reports"
+"How do I share my reports with another doctor?","You can download and share them digitally.","Medical Records & Reports"
+"Can I get a second opinion?","Yes, you may request a second opinion online or in person.","Medical Records & Reports"
+"What should I do in an emergency?","Visit the nearest Apollo emergency department or call the emergency helpline.","Emergency & Critical Care"
+"Does Apollo provide ambulance services?","Yes, 24/7 ambulance services are available.","Emergency & Critical Care"
+"How do I call for an ambulance?","Use the emergency hotline listed on the website or app.","Emergency & Critical Care"
+"What services are available in emergency rooms?","Triage, trauma care, stabilization, diagnostics, and immediate treatment.","Emergency & Critical Care"
+"Do I need an appointment for emergency care?","No, walk-in emergencies are always accepted.","Emergency & Critical Care"
+"Are emergency treatments covered by insurance?","Coverage depends on your insurance policy.","Emergency & Critical Care"
+"Does Apollo have trauma care units?","Yes, specialized trauma teams are available at major branches.","Emergency & Critical Care"
+"What is the triage process?","Patients are prioritized based on severity of condition.","Emergency & Critical Care"
+"Are ICU beds available 24/7?","Yes, ICU access is available around the clock.","Emergency & Critical Care"
+"Can relatives stay in critical care areas?","Usually not inside, but waiting areas are provided.","Emergency & Critical Care"
+"What is the process for admission?","Submit doctor advice, ID proof, and insurance details at the admission desk.","Inpatient Admission & Surgery"
+"What documents are required?","ID proof, insurance card, and medical reports.","Inpatient Admission & Surgery"
+"How are room charges calculated?","Based on room type and duration of stay.","Inpatient Admission & Surgery"
+"What room categories are available?","General ward, semi-private, private, deluxe, and suite rooms.","Inpatient Admission & Surgery"
+"Can I choose my room type?","Yes, subject to availability.","Inpatient Admission & Surgery"
+"What is included in room charges?","Nursing care, basic amenities, and routine services.","Inpatient Admission & Surgery"
+"How do I prepare for surgery?","Follow doctor instructions, fasting guidelines, and pre-operative tests.","Inpatient Admission & Surgery"
+"Can I meet the anesthesiologist before surgery?","Yes, pre-anesthesia evaluation is mandatory.","Inpatient Admission & Surgery"
+"How long is hospital stay after surgery?","Duration depends on the procedure and recovery.","Inpatient Admission & Surgery"
+"Can attendants stay with the patient?","Yes, usually one attendant is allowed.","Inpatient Admission & Surgery"
+"Does Apollo offer teleconsultation?","Yes, video and phone consultations are available.","Online Services & Telehealth"
+"How do I book teleconsultation?","Through the app or website.","Online Services & Telehealth"
+"What equipment do I need?","A smartphone or computer with internet and a camera.","Online Services & Telehealth"
+"Can I upload reports before the appointment?","Yes, the app allows report uploads.","Online Services & Telehealth"
+"Can doctors prescribe medicines online?","Yes, digital prescriptions are provided.","Online Services & Telehealth"
+"Are teleconsultations covered by insurance?","Depends on your policy.","Online Services & Telehealth"
+"How do I access the Apollo 24/7 app?","Download from the Play Store or App Store.","Online Services & Telehealth"
+"Can I chat with medical support?","Yes, chat support is available in the app.","Online Services & Telehealth"
+"Can I track prescriptions online?","Yes, your medication history is stored digitally.","Online Services & Telehealth"
+"What if my video call disconnects?","You can reconnect or reschedule through support.","Online Services & Telehealth"
+"How do I book a lab test?","Tests can be booked through the app, website, or reception.","Diagnostics (Lab & Imaging)"
+"Do I need a prescription?","Yes, for most tests.","Diagnostics (Lab & Imaging)"
+"When are blood test results available?","Usually within a few hours, depending on the test.","Diagnostics (Lab & Imaging)"
+"What fasting is required?","Typically 8–12 hours for fasting tests; follow doctor instructions.","Diagnostics (Lab & Imaging)"
+"Is home sample collection available?","Yes, through the app or call center.","Diagnostics (Lab & Imaging)"
+"What imaging services are available?","MRI, CT scan, ultrasound, X-ray, mammography, and more.","Diagnostics (Lab & Imaging)"
+"Is contrast imaging safe?","Generally safe; the radiologist will evaluate your suitability.","Diagnostics (Lab & Imaging)"
+"What are diagnostic charges?","Charges vary by test and branch.","Diagnostics (Lab & Imaging)"
+"Can I access reports online?","Yes, all reports are uploaded digitally.","Diagnostics (Lab & Imaging)"
+"Are diagnostic centers open on weekends?","Yes, most operate on weekends with limited hours.","Diagnostics (Lab & Imaging)"
+"Does Apollo have an in-house pharmacy?","Yes, most branches have a 24/7 pharmacy.","Pharmacy & Medications"
+"Can I order medicines online?","Yes, via the Apollo 24/7 app.","Pharmacy & Medications"
+"How fast is medicine delivery?","Delivery times vary by location.","Pharmacy & Medications"
+"Is prescription required online?","Yes, for prescription medicines.","Pharmacy & Medications"
+"Does Apollo provide generic medicines?","Yes, generics are available when appropriate.","Pharmacy & Medications"
+"How do I track my order?","You can track through the app.","Pharmacy & Medications"
+"Are refunds allowed?","Refunds depend on pharmacy policies and product type.","Pharmacy & Medications"
+"Can I get medication reminders?","Yes, the app supports reminders.","Pharmacy & Medications"
+"Can I consult a pharmacist online?","Yes, pharmacist support is available in the app.","Pharmacy & Medications"
+"Is the pharmacy 24/7?","Many branches operate round the clock.","Pharmacy & Medications"
+"What services are available for international patients?","Dedicated coordinators, airport pickup, translation, and treatment planning.","International Patients"
+"Can Apollo provide a visa invitation letter?","Yes, upon confirming treatment plans.","International Patients"
+"Is airport pickup available?","Yes, for select branches.","International Patients"
+"How can I estimate my treatment cost?","By sharing your reports with the international patient team.","International Patients"
+"Are language interpreters available?","Yes, for major international languages.","International Patients"
+"Are international insurance plans accepted?","Accepted selectively; check with the international desk.","International Patients"
+"How do I book a treatment package?","Through the hospital's international patient services team.","International Patients"
+"Can I stay for follow-up care?","Yes, depending on visa duration.","International Patients"
+"How will I receive my post-treatment records?","Reports can be provided digitally or physically.","International Patients"
+"Who can I contact for international patient support?","The dedicated international helpdesk via email, phone, or website.","International Patients"
+Tell me about Apollo Hospital,Apollo Hospitals is a multispecialty healthcare provider offering consultations diagnostics surgeries and emergency care,general
+Whats the story with this hospital,Apollo Hospitals was established to deliver quality healthcare using modern medical technology,general
+What kind of medical stuff do you do,Apollo provides services across cardiology neurology orthopedics oncology pediatrics and more,general
+When do you guys open,Emergency services operate twenty four seven while clinics follow scheduled hours,general
+Are you open on Sundays,Yes emergency services are available on Sundays,general
+What are the timings for the clinic,Clinic timings depend on doctor availability and department schedules,general
+How do I talk to a human,You can speak to staff at the hospital help desk or customer support,general
+Is there a support number,Yes Apollo provides a customer support helpline,general
+Where is the nearest Apollo,Nearest Apollo Hospital can be found using the official app or website,general
+Can I visit my friend in the ward,Yes visits are allowed during assigned visiting hours,general
+What are the rules for visitors,Visitor rules depend on hospital policy and ward type,general
+Do you have a chemist inside,Yes Apollo hospitals usually have an inhouse pharmacy,general
+Is there a lab in the hospital,Yes diagnostic lab services are available,general
+Where can I get a blood test done,Blood tests can be done at the Apollo diagnostic lab,general
+How do I give feedback,Feedback can be shared through the app website or help desk,general
+I need a doctor,You can book a doctor appointment using the app website or hospital counter,appointment
+Can I see a specialist today,Same day specialist visits depend on availability,appointment
+I want to fix an appointment,Appointments can be booked online or at the hospital,appointment
+Is online booking available,Yes online appointment booking is supported,appointment
+Can I use the app to book,Yes appointments can be booked using the Apollo app,appointment
+I need to change my appointment time,Appointments can be rescheduled through the app or help desk,appointment
+Cancel my booking for tomorrow,You can cancel appointments using official booking channels,appointment
+Check my booking status,Booking status can be checked in the app or confirmation message,appointment
+Will I get a text after I book,Yes booking confirmation is usually sent via message,appointment
+What should I bring for my checkup,Please bring valid ID and previous medical records,appointment
+Should I bring my old files,Yes previous reports help doctors understand your history,appointment
+How early should I come,Arriving fifteen minutes early is recommended,appointment
+Can I pick my own doctor,Yes doctor selection is available during booking,appointment
+Can I do a video call with a doctor,Yes video consultations are available,appointment
+Is remote consultation possible,Yes teleconsultation services are supported,appointment
+Do you take insurance,Yes Apollo Hospitals accepts many insurance providers,billing
+Is my health policy valid here,Insurance acceptance depends on your policy,billing
+Can I get cashless treatment,Cashless treatment is available for eligible insurance,billing
+Process for insurance approval,Insurance approval requires document verification,billing
+I need a breakdown of my bill,Itemized bills are available from billing department,billing
+Can I pay with a credit card,Yes card payments are accepted,billing
+Do you accept UPI or Google Pay,Yes digital payments are accepted,billing
+Is cash okay,Yes cash payments are accepted,billing
+Can I get a refund on my consultation fee,Refunds depend on cancellation policy,billing
+I lost my bill can I get another copy,Duplicate bills can be requested,billing
+Where are my test results,Reports can be viewed in the Apollo app or collected at hospital,records
+Can I see my reports on my phone,Yes digital reports are available in the app,records
+How many days for the biopsy report,Biopsy reports usually take a few working days,records
+When will my blood work be ready,Most blood reports are ready within one to two days,records
+I need my prescription online,Digital prescriptions are available in the app,records
+Change my phone number in your records,Personal details can be updated via help desk,records
+Is my data private,Yes patient data is protected under privacy policies,records
+Can my brother pick up my reports,Authorized persons can collect reports with ID,records
+I want a second opinion from another doctor,You can consult another specialist at Apollo,records
+I have an emergency,Please visit the nearest Apollo emergency room immediately,emergency
+Someone is having a heart attack,Call emergency services or rush to Apollo ER,emergency
+I need an ambulance right now,You can request an ambulance through Apollo services,emergency
+What is the ambulance number,Ambulance contact details are available online,emergency
+Is the emergency room open,Yes emergency services operate twenty four seven,emergency
+Is ICU available,ICU availability depends on real time capacity,emergency
+Can I stay with my dad in the ICU,ICU visiting is restricted for safety,emergency
+How much does an ambulance cost,Charges depend on distance and service type,emergency
+Do you have a trauma center,Yes trauma care facilities are available,emergency
+Where is Apollo Hospital in Chennai,Apollo Hospital is located in Greams Road Chennai,location
+Is there an Apollo Hospital in Delhi,Apollo Hospital is present in Sarita Vihar New Delhi,location
+Do you have Apollo Hospital in Hyderabad,Apollo Hospital is available in Jubilee Hills Hyderabad,location
+Where is Apollo Hospital in Bengaluru,Apollo Hospital is located in Bannerghatta Road Bengaluru,location
+Is Apollo Hospital available in Kolkata,Apollo Hospital operates in Salt Lake Kolkata,location
+Where is Apollo Hospital in Mumbai,Apollo Hospital is located in Navi Mumbai,location
+Is there an Apollo Hospital in Ahmedabad,Apollo Hospital is present in Gandhinagar Ahmedabad,location
+Do you have Apollo Hospital in Pune,Apollo Hospital is available in Pune city area,location
+Where is Apollo Hospital in Chennai OMR,Apollo Hospital is present on Old Mahabalipuram Road Chennai,location
+Is Apollo Hospital available in Madurai,Apollo Hospital operates in Madurai Tamil Nadu,location
+Where is Apollo Hospital in Trichy,Apollo Hospital is located in Tiruchirappalli Tamil Nadu,location
+Is there an Apollo Hospital in Vizag,Apollo Hospital is present in Visakhapatnam Andhra Pradesh,location
+Do you have Apollo Hospital in Bhubaneswar,Apollo Hospital operates in Bhubaneswar Odisha,location
+Where is Apollo Hospital in Indore,Apollo Hospital is located in Indore Madhya Pradesh,location
+Is Apollo Hospital available in Lucknow,Apollo Hospital operates in Lucknow Uttar Pradesh,location
+Where is Apollo Hospital in Noida,Apollo Hospital is located in Noida Uttar Pradesh,location
+Is there an Apollo Hospital in Guwahati,Apollo Hospital operates in Guwahati Assam,location
+Do you have Apollo Hospital in Ranchi,Apollo Hospital is available in Ranchi Jharkhand,location
+Where is Apollo Hospital in Karaikudi,Apollo Hospital is located in Karaikudi Tamil Nadu,location
+Is Apollo Hospital present in Nellore,Apollo Hospital operates in Nellore Andhra Pradesh,location
+Where is Apollo Hospital located,Apollo Hospital is located in multiple cities across India including metro and major regional locations,location
+Where is Apollo Hospital located,Apollo Hospital is located across India in cities such as Chennai Delhi Hyderabad Bengaluru Kolkata Mumbai Ahmedabad Pune Madurai Trichy Vizag Bhubaneswar Indore Lucknow Noida Guwahati Ranchi Karaikudi and Nellore,location

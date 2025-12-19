@@ -1,0 +1,29 @@
+# --- Environment Variables (CRITICAL) ---
+# Contains your GROQ_API_KEY and other secrets
+.env
+rag_env.txt
+
+# --- Python & Virtual Environments ---
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Databases & Local Storage ---
+# From sql.py: db=SqliteDb(db_file="tmp/agent.db")
+tmp/
+*.db
+*.db-journal
+
+# --- Vector Database (ChromaDB) ---
+# From faq.py: path="data/vector_db/chromadb_faqs"
+data/vector_db/
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+
+# --- Package Manager ---
+# Keep pyproject.toml and uv.lock (usually committed for reproducibility)
+# but ignore the local uv cache if it appears
+.uv/
