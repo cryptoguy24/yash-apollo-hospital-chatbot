@@ -19,7 +19,7 @@ load_dotenv()
 
 # Set up the path to the SQLite database that stores appointment information
 current_dir = os.path.dirname(os.path.abspath(__file__))  # Get the current file's directory
-db_path = os.path.join(current_dir, "..", "app", "data", "appointment_system.db")  # Navigate to the database file
+db_path = os.path.join(current_dir, "..", "data", "appointment_system.db")  # Navigate to the database file
 db_path = os.path.normpath(db_path)  # Normalize the path for cross-platform compatibility
 db_url = f"sqlite:///{db_path}"  # Create a database URL for SQLAlchemy
 
