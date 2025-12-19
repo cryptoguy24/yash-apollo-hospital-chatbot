@@ -3,6 +3,7 @@ import os
 
 # Configuration management - for loading API keys and settings from .env file
 from dotenv import load_dotenv
+from config import GROQ_MODEL_Q
 
 # AI Agent framework - for creating intelligent agents with database access
 from agno.agent import Agent
@@ -45,7 +46,7 @@ def handling_agent(Query: str, session_id: str):
     
     # Create an AI agent configured as a hospital receptionist
     booking_agent = Agent(
-        model=Groq(id=os.environ['GROQ_MODEL_Q']),
+        model=Groq(id= GROQ_MODEL_Q),                       # os.environ['GROQ_MODEL_Q']),
         description="You are a capable Hospital Receptionist managing patient flow and doctor schedules.",
         tools=sql_tools.tools,
         add_datetime_to_context=True,

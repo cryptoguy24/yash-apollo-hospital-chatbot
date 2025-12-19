@@ -8,6 +8,7 @@ import pandas as pd
 
 # Configuration management - for loading API keys and settings from .env file
 from dotenv import load_dotenv
+from config import GROQ_API_KEY, GROQ_MODEL
 
 # Vector database operations - for storing and searching FAQs using embeddings
 import chromadb
@@ -36,7 +37,7 @@ collection_name = "faqs_collection"
 # ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
 
 # Set up the Groq AI model using the model name from environment variables
-groq_client = ChatGroq(model = os.environ['Groq_Model'])
+groq_client = ChatGroq(model = GROQ_MODEL)
 
 # Set up a parser to extract plain text from AI responses
 parser = StrOutputParser()
