@@ -11,6 +11,26 @@ The assistant employs a "Router-Worker" architecture to ensure user queries are 
 3. **FAQ RAG Worker:** A semantic search engine using **ChromaDB** to retrieve precise answers from hospital policy documents.
 
 ---
+graph TD
+    A[User Input] --> B{Semantic Router}
+    
+    B -- "Intent: faq" --> C[FAQ RAG Worker]
+    C --> C1[ChromaDB Search]
+    C1 --> C2[LangChain Response]
+    C2 --> Z[Final Response]
+
+    B -- "Intent: appointment" --> D[Agentic SQL Worker]
+    D --> D1[Agno SQL Agent]
+    D1 --> D2[SQLite DB CRUD]
+    D2 --> Z
+
+    B -- "No Match / None" --> E{Check Last Active Route}
+    E -- "Last was Appointment" --> D
+    E -- "Last was FAQ" --> C
+    E -- "No Context" --> F[General LLM Greeting]
+    F --> Z
+
+---
 
 ## ✨ Key Features
 
