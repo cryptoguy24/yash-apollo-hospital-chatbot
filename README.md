@@ -4,7 +4,7 @@ An advanced, multi-modal AI conversational agent designed for **Apollo Hospitals
 
 **Try the App - Click Below!**
 
-[![App Demo](src/chat-bot.gif)](https://apollo-hospital-chatbot.streamlit.app/)
+### 🚀 Try the App: [![App Icon](src/chat-bot.gif)](https://apollo-hospital-chatbot.streamlit.app/)
 
 ## 🚀 System Architecture
 
