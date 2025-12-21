@@ -11,6 +11,8 @@ __pycache__/
 
 .streamlit/secrets.toml
 
+config.py
+
 # --- OS Specific ---
 .DS_Store
 Thumbs.db
