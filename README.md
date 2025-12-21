@@ -1,12 +1,5 @@
 # 🏥 Apollo Hospital AI Assistant
 
-<p align="left">
-  <a href="https://apollo-hospital-chatbot.streamlit.app/">
-    <img src="src/chat-bot.gif" alt="Chatbot Icon" height="40px">
-  </a>
-  <b> &nbsp; Live Demo: Click the icon to try the assistant!</b>
-</p>
-
 An advanced, multi-modal AI conversational agent designed for **Apollo Hospitals**. This system integrates **Agentic AI** for database management and **Retrieval-Augmented Generation (RAG)** for high-accuracy FAQ handling, all orchestrated by an intelligent semantic router.
 
 ## 🚀 System Architecture
@@ -18,7 +11,7 @@ The assistant employs a "Router-Worker" architecture to ensure user queries are 
 3. **FAQ RAG Worker:** A semantic search engine using **ChromaDB** to retrieve precise answers from hospital policy documents.
 
 ---
-[![Interactive Architecture Map](src/architecture.html)](https://github.com/cryptoguy24/yash-apollo-hospital-chatbot/tree/main/src/architecture.html)
+[![Interactive Architecture Map](screenshots/Map.png)]
 
 ---
 
