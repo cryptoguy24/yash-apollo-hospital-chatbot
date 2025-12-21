@@ -11,12 +11,12 @@ The assistant employs a "Router-Worker" architecture to ensure user queries are 
 3. **FAQ RAG Worker:** A semantic search engine using **ChromaDB** to retrieve precise answers from hospital policy documents.
 
 ---
-<div style="width: 100%; overflow-x: auto;">
+```mermaid
 stateDiagram-v2
     [*] --> UserQuery: User types a message
-    
+
     UserQuery --> SemanticRouter: Intent Classification
-    
+
     state SemanticRouter {
         direction lr
         [*] --> Embedding
@@ -53,9 +53,8 @@ stateDiagram-v2
     FAQ_Worker --> StreamlitUI: Display Answer
     Appointment_Worker --> StreamlitUI: Display Schedule/Booking
     Fallback --> StreamlitUI: Display Fallback
-    
+
     StreamlitUI --> [*]: Session ID Updated
-</div>
 
 ---
 
