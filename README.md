@@ -2,6 +2,10 @@
 
 An advanced, multi-modal AI conversational agent designed for **Apollo Hospitals**. This system integrates **Agentic AI** for database management and **Retrieval-Augmented Generation (RAG)** for high-accuracy FAQ handling, all orchestrated by an intelligent semantic router.
 
+**Try the App - Click Below!**
+
+[![App Demo](src/chat-bot.gif)](https://apollo-hospital-chatbot.streamlit.app/)
+
 ## 🚀 System Architecture
 
 The assistant employs a "Router-Worker" architecture to ensure user queries are handled by the most specialized component:
@@ -10,9 +14,8 @@ The assistant employs a "Router-Worker" architecture to ensure user queries are 
 2. **Agentic SQL Worker:** An autonomous agent powered by the **Agno** framework that writes and executes SQL queries to manage doctor schedules and patient bookings.
 3. **FAQ RAG Worker:** A semantic search engine using **ChromaDB** to retrieve precise answers from hospital policy documents.
 
-[![Architecture Map](https://img.shields.io/badge/View-Interactive_Map-blue?style=for-the-badge)](https://github.com/cryptoguy24/yash-apollo-hospital-chatbot/tree/main/src/architecture.html)
-[![Interactive Architecture Map](screenshots/architecture-preview.png)](https://github.com/cryptoguy24/yash-apollo-hospital-chatbot/tree/main/src/architecture.html)
 ---
+[![Interactive Architecture Map](src/architecture.html)](https://github.com/cryptoguy24/yash-apollo-hospital-chatbot/tree/main/src/architecture.html)
 
 ---
 
