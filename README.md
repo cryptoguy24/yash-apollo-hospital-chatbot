@@ -55,7 +55,7 @@ stateDiagram-v2
     Fallback --> StreamlitUI: Display Fallback
 
     StreamlitUI --> [*]: Session ID Updated
-
+```
 ---
 
 ## ✨ Key Features
