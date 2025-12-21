@@ -11,51 +11,64 @@ The assistant employs a "Router-Worker" architecture to ensure user queries are 
 3. **FAQ RAG Worker:** A semantic search engine using **ChromaDB** to retrieve precise answers from hospital policy documents.
 
 ---
-```mermaid
 stateDiagram-v2
     [*] --> UserQuery: User types a message
 
-    UserQuery --> SemanticRouter: Intent Classification
+    UserQuery --> SemanticRouter: Intent classification
 
     state SemanticRouter {
         direction lr
         [*] --> Embedding
-        Embedding --> VectorMatch: Compare with Utterances
+        Embedding --> VectorMatch
     }
 
-    SemanticRouter --> FAQ_Worker: Match: "faq"
-    SemanticRouter --> Appointment_Worker: Match: "appointment"
-    SemanticRouter --> Fallback: No Match (Confidence Low)
+    SemanticRouter --> FAQ_Worker: faq
+    SemanticRouter --> Appointment_Worker: appointment
+    SemanticRouter --> Fallback: low confidence
 
     state FAQ_Worker {
         direction tb
-        Retrieve: Search ChromaDB
-        Generate: LangChain Prompt
+        Retrieve
+        Generate
         Retrieve --> Generate
     }
 
     state Appointment_Worker {
         direction tb
-        Map: Layman to Specialist
-        CheckDB: SQL Query (Availability)
-        Verify: Name & Phone Check
+        Map
+        CheckDB
+        Verify
         Map --> CheckDB
         CheckDB --> Verify
     }
 
     state Fallback {
         direction lr
-        CheckHistory: Check st.session_state
-        Greeting: Warm Greeting / Topic Refusal
         CheckHistory --> Greeting
     }
 
-    FAQ_Worker --> StreamlitUI: Display Answer
-    Appointment_Worker --> StreamlitUI: Display Schedule/Booking
-    Fallback --> StreamlitUI: Display Fallback
+    FAQ_Worker --> StreamlitUI: answer
+    Appointment_Worker --> StreamlitUI: booking
+    Fallback --> StreamlitUI: fallback
 
-    StreamlitUI --> [*]: Session ID Updated
-```
+    StreamlitUI --> [*]: session updated
+
+    note right of FAQ_Worker
+        Search ChromaDB
+        Generate via LangChain
+    end note
+
+    note right of Appointment_Worker
+        Map layman → specialist
+        SQL availability check
+        Verify name & phone
+    end note
+
+    note right of Fallback
+        Uses st.session_state
+        Greeting or refusal
+    end note
+
 ---
 
 ## ✨ Key Features
