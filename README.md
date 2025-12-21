@@ -2,6 +2,9 @@
 
 An advanced, multi-modal AI conversational agent designed for **Apollo Hospitals**. This system integrates **Agentic AI** for database management and **Retrieval-Augmented Generation (RAG)** for high-accuracy FAQ handling, all orchestrated by an intelligent semantic router.
 
+## 🔗 Live Demo
+👉 [Click here](https://apollo-hospital-chatbot.streamlit.app/)
+
 ## 🚀 System Architecture
 
 The assistant employs a "Router-Worker" architecture to ensure user queries are handled by the most specialized component:
@@ -11,7 +14,8 @@ The assistant employs a "Router-Worker" architecture to ensure user queries are 
 3. **FAQ RAG Worker:** A semantic search engine using **ChromaDB** to retrieve precise answers from hospital policy documents.
 
 ---
-[![Interactive Architecture Map](screenshots/Map.png)]
+## 🏛️ Architecture of the system
+![Interactive Architecture Map](screenshots/Map.png)
 
 ---
 
