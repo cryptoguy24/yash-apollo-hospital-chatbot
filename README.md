@@ -11,24 +11,51 @@ The assistant employs a "Router-Worker" architecture to ensure user queries are 
 3. **FAQ RAG Worker:** A semantic search engine using **ChromaDB** to retrieve precise answers from hospital policy documents.
 
 ---
-graph TD
-    A[User Input] --> B{Semantic Router}
+<div style="width: 100%; overflow-x: auto;">
+stateDiagram-v2
+    [*] --> UserQuery: User types a message
     
-    B -- "Intent: faq" --> C[FAQ RAG Worker]
-    C --> C1[ChromaDB Search]
-    C1 --> C2[LangChain Response]
-    C2 --> Z[Final Response]
+    UserQuery --> SemanticRouter: Intent Classification
+    
+    state SemanticRouter {
+        direction lr
+        [*] --> Embedding
+        Embedding --> VectorMatch: Compare with Utterances
+    }
 
-    B -- "Intent: appointment" --> D[Agentic SQL Worker]
-    D --> D1[Agno SQL Agent]
-    D1 --> D2[SQLite DB CRUD]
-    D2 --> Z
+    SemanticRouter --> FAQ_Worker: Match: "faq"
+    SemanticRouter --> Appointment_Worker: Match: "appointment"
+    SemanticRouter --> Fallback: No Match (Confidence Low)
 
-    B -- "No Match / None" --> E{Check Last Active Route}
-    E -- "Last was Appointment" --> D
-    E -- "Last was FAQ" --> C
-    E -- "No Context" --> F[General LLM Greeting]
-    F --> Z
+    state FAQ_Worker {
+        direction tb
+        Retrieve: Search ChromaDB
+        Generate: LangChain Prompt
+        Retrieve --> Generate
+    }
+
+    state Appointment_Worker {
+        direction tb
+        Map: Layman to Specialist
+        CheckDB: SQL Query (Availability)
+        Verify: Name & Phone Check
+        Map --> CheckDB
+        CheckDB --> Verify
+    }
+
+    state Fallback {
+        direction lr
+        CheckHistory: Check st.session_state
+        Greeting: Warm Greeting / Topic Refusal
+        CheckHistory --> Greeting
+    }
+
+    FAQ_Worker --> StreamlitUI: Display Answer
+    Appointment_Worker --> StreamlitUI: Display Schedule/Booking
+    Fallback --> StreamlitUI: Display Fallback
+    
+    StreamlitUI --> [*]: Session ID Updated
+</div>
 
 ---
 
