@@ -10,64 +10,8 @@ The assistant employs a "Router-Worker" architecture to ensure user queries are 
 2. **Agentic SQL Worker:** An autonomous agent powered by the **Agno** framework that writes and executes SQL queries to manage doctor schedules and patient bookings.
 3. **FAQ RAG Worker:** A semantic search engine using **ChromaDB** to retrieve precise answers from hospital policy documents.
 
+[![Interactive Architecture Map](screenshots/architecture-preview.png)](https://github.com/cryptoguy24/yash-apollo-hospital-chatbot/tree/main/src/architecture.html)
 ---
-stateDiagram-v2
-    [*] --> UserQuery: User types a message
-
-    UserQuery --> SemanticRouter: Intent classification
-
-    state SemanticRouter {
-        direction lr
-        [*] --> Embedding
-        Embedding --> VectorMatch
-    }
-
-    SemanticRouter --> FAQ_Worker: faq
-    SemanticRouter --> Appointment_Worker: appointment
-    SemanticRouter --> Fallback: low confidence
-
-    state FAQ_Worker {
-        direction tb
-        Retrieve
-        Generate
-        Retrieve --> Generate
-    }
-
-    state Appointment_Worker {
-        direction tb
-        Map
-        CheckDB
-        Verify
-        Map --> CheckDB
-        CheckDB --> Verify
-    }
-
-    state Fallback {
-        direction lr
-        CheckHistory --> Greeting
-    }
-
-    FAQ_Worker --> StreamlitUI: answer
-    Appointment_Worker --> StreamlitUI: booking
-    Fallback --> StreamlitUI: fallback
-
-    StreamlitUI --> [*]: session updated
-
-    note right of FAQ_Worker
-        Search ChromaDB
-        Generate via LangChain
-    end note
-
-    note right of Appointment_Worker
-        Map layman → specialist
-        SQL availability check
-        Verify name & phone
-    end note
-
-    note right of Fallback
-        Uses st.session_state
-        Greeting or refusal
-    end note
 
 ---
 
