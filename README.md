@@ -2,16 +2,12 @@
 
 <p align="left">
   <a href="https://apollo-hospital-chatbot.streamlit.app/">
-    <img src="src/chat-bot.gif" alt="Chatbot Icon" height="30px">
+    <img src="src/chat-bot.gif" alt="Chatbot Icon" height="40px">
   </a>
   <b> &nbsp; Live Demo: Click the icon to try the assistant!</b>
 </p>
 
 An advanced, multi-modal AI conversational agent designed for **Apollo Hospitals**. This system integrates **Agentic AI** for database management and **Retrieval-Augmented Generation (RAG)** for high-accuracy FAQ handling, all orchestrated by an intelligent semantic router.
-
-**Try the App - Click Below!**
-
-### 🚀 Try the App: [![App Icon](src/chat-bot.gif)](https://apollo-hospital-chatbot.streamlit.app/)
 
 ## 🚀 System Architecture
 
